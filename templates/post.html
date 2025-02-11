@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  {{> head}}
+  <body>
+    <div id="container">
+      {{> navbar}}
+        <div id="content">
+          <h1>{{title}}</h1>
+          {{#if date}}
+            <h2>{{formatDate date}}</h2>
+          {{/if}}
+        
+          {{{content}}}
+        </div>
+        <div id="nextprev">
+          {{#if postNext}}<a href="{{postNext.url}}">« next post</a> | {{/if}}
+          <a href="/index.html">home</a>
+          {{#if postPrev}} | <a href="{{postPrev.url}}">previous post »</a>{{/if}}
+        </div>
+      {{> footer}}
+    </div>
+  </body>
+</html>
