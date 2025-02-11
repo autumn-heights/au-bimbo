@@ -60,9 +60,9 @@ data.site.navPages = _.chain(data.pages)
 
 // TODO - sort options
 data.site.blogPosts = _.chain(data.pages)
-	.filter((v) => { return path.dirname(v.path) == paths.posts })
-	.sortBy((v) => { return -v.date })
-	.value()
+    .filter((v) => { return path.dirname(v.path).replace(/\\/g, '/') == paths.posts })
+    .sortBy((v) => { return -v.date })
+    .value()
 
 // include prev/next context for posts
 _.each(data.site.blogPosts, (v, i) => {
