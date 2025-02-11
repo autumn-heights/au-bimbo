@@ -1,6 +1,7 @@
 ---
 title: about
-navIndex: 3
+navIndex: 2
 ---
 
-i'm a dumb GIRL who loves POSTING on the INTERNET
+
+kind of awesome
