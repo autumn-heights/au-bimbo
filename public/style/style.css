@@ -1,0 +1,163 @@
+/* CSS is how you can add style to your website, such as colors, fonts, and positioning of your
+   HTML content. To learn how to do something, just try searching Google for questions like
+   "how to change link color." */
+
+   body {
+    background-color: #ffecf2; /* Light pink background */
+    background-image: url('../images/bg_diamond.png');
+    background-position: top;
+    background-attachment: fixed;
+    animation: scrollBackground 20s linear infinite; /* Add diagonal scrolling animation */
+    font-size: 18px;
+    font-family: Georgia, "Times New Roman", serif;
+    margin: 0;
+  }
+  
+  /* Diagonal scrolling animation */
+  @keyframes scrollBackground {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: 100% 100%;
+    }
+  }
+  
+  p {
+    line-height: 1.6em; /*I find the default HTML line-height tends to be a bit claustrophobic for main text*/
+  }
+  
+  hr {
+    border: solid #ffc0d3; /* Pastel pink for horizontal rule */
+    border-width: 2px 0 0 0;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+  .right {
+    float: right;
+    margin-left: 1em;
+  }
+  .left {
+    float: left;
+    margin-right: 1em;
+  }
+  .center {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+  }
+  @media only screen and (min-width: 600px) {
+    .small {
+      max-width: 60%;
+      height: auto;
+    }
+  }
+  .caption {
+    margin-top: 0;
+    font-size: 0.9em;
+    font-style: italic;
+  }
+  
+  a:hover { 
+    background-color: #ffe0eb; /* Light pink hover background */
+  }
+  
+  h1, h2, h3, h4, h5 {
+    font-family: Tahoma, Geneva, sans-serif;
+    color: #e75d90; /* Pink-ish heading color */
+  }
+  
+  /*#CONTAINER is the rectangle that contains everything but the background!*/
+  #container {
+    margin: 3em auto;
+    width: 90%;
+    max-width: 700px;
+    background-color: #ffffff; /* White container background */
+    color: #333333; /* Darker text for better contrast */
+    box-shadow: 0 0 10px rgba(231, 93, 144, 0.3); /* Soft pink shadow */
+    border-radius: 8px; /* Rounded corners */
+    outline: none; /* Remove outline */
+  }
+  
+  #content {
+    padding: 10px 5% 20px 5%;
+  }
+  
+  /*HEADER STYLE*/
+  #header {
+    background-color: #ffa6c1; /* Pastel pink header */
+    padding: 0 5%;
+    border-bottom: 3px solid #ffcce0; /* Lighter pink border */
+    border-top-left-radius: 8px; /* Match container rounded corners */
+    border-top-right-radius: 8px;
+  }
+  #header ul {
+    list-style-type: none;
+    padding: 0.5em 0;
+    margin: 0;
+  }
+  #header li {
+    font-size: 1.2em;
+    display: inline-block;
+    margin-right: 1.5em;
+    margin-bottom: 0.2em;
+    margin-top: 0.2em;
+  }
+  #header li a {
+    color: white;
+    text-decoration: none;
+    background-color: inherit;
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+  }
+  #header li a:hover {
+    text-decoration: underline;
+    color: #ffffff; /* White text on hover */
+  }
+  
+  /*POST LIST STYLE*/
+  #postlistdiv ul {
+    font-size: 1.2em;
+    padding: 0;
+    list-style-type: none;
+  }
+  #recentpostlistdiv ul {
+    font-size: 1.2em;
+    padding: 0;
+    list-style-type: none;
+  }
+  .moreposts {
+    font-size: 0.8em;
+    margin-top: 0.2em;
+    color: #e75d90; /* Pink text */
+  }
+  
+  /*NEXT AND PREVIOUS LINKS STYLE*/
+  #nextprev {
+    text-align: center;
+    margin-top: 1.4em;
+  }
+  #nextprev a {
+    color: #e75d90; /* Pink links */
+    text-decoration: none;
+  }
+  #nextprev a:hover {
+    text-decoration: underline;
+  }
+  
+  /*DISQUS STYLE*/
+  #disqus_thread {
+    margin-top: 1.6em;
+  }
+  
+  /*FOOTER STYLE*/
+  #footer {
+    font-size: 0.8em;
+    padding: 0 5% 10px 5%;
+    color: #999; /* Lighter text for footer */
+  }
