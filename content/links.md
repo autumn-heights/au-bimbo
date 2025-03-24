@@ -10,7 +10,9 @@ navIndex: 3
 
 #### friends of the blog
 - [rhia](https://scux.io)
+- [vivienne](https://vivienne.zone/)
 
 #### comics you should read
 - [petal and leaf](https://petalandleaf.neocities.org/)
+- [garden guardians](https://www.gardenguardians.kelszzles.com/ch1a)
 - [goober grove](https://goobergrove.com/)
