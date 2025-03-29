@@ -2,7 +2,7 @@
 npm run build
 
 # Zip the public directory
-Compress-Archive -Path "./public" -DestinationPath "./public.zip"
+Compress-Archive -Path "./public" -DestinationPath "./public.zip" -Force
 
 # Check if there are any changes to commit
 $changes = git status --porcelain
@@ -24,3 +24,7 @@ if ($changes) {
 } else {
     Write-Output "No changes to commit."
 }
+
+
+# Update the spat-out directory
+Compress-Archive -Path "." -DestinationPath "../au-bimbo-latest.zip" -Force
