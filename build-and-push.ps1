@@ -8,7 +8,6 @@ Compress-Archive -Path "./public" -DestinationPath "./public.zip" -Force
 $changes = git status --porcelain
 
 if ($changes) {
-
     # Add all changes to git
     git add .
 
@@ -20,11 +19,12 @@ if ($changes) {
 
     # Push the changes to the remote repository
     git push origin main
-
 } else {
     Write-Output "No changes to commit."
 }
 
-
-# Update the spat-out directory
-Compress-Archive -Path "." -DestinationPath "../au-bimbo-latest.zip" -Force
+# Create a zip file with only git-tracked files
+$tempFile = [System.IO.Path]::GetTempFileName()
+git ls-files | Out-File -FilePath $tempFile
+Compress-Archive -Path (Get-Content $tempFile) -DestinationPath "../au-bimbo-latest.zip" -Force
+Remove-Item $tempFile
